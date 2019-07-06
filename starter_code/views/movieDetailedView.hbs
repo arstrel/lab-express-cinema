@@ -1,0 +1,30 @@
+
+<div class="detailed-page-container">
+  <div class="detailed-btn-wrapper">
+   <a href="/movies" class="iron-btn">Go back</a>
+  </div>
+
+
+  <div class="detailed-dynamic-container">
+
+  <img src="{{theMovie.image}}" alt="">
+    <div class="detailed-content-wrapper">
+
+    <h2>{{theMovie.title}}</h2>
+    <h4>{{theMovie.director}}</h4>
+    <h5>Stars:</h5>
+    <ul>
+    {{#each theMovie.stars}}
+    <li>{{this}}</li>
+    {{/each}}
+    </ul>
+    <p>{{theMovie.description}}</p>
+
+    {{#each theMovie.showtimes}}
+    <span> {{this}} |</span>
+
+    {{/each}}
+
+    </div>
+  </div>
+</div>

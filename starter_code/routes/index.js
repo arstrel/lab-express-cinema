@@ -17,6 +17,15 @@ router.get('/movies', (req,res,next) => {
     })
 });
 
+router.get('/movies/:movieID', (req, res, next) => {
+  movie.findById(req.params.movieID)
+    .then((oneSingleMovie) => {
+      res.render('movieDetailedView', {theMovie: oneSingleMovie})
+    })
+    .catch((err) => {
+      next(err);
+    })
+})
 
 
 
