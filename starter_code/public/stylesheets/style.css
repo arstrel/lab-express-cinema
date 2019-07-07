@@ -13,6 +13,10 @@ html, body {
   background-size: cover;
   background-position: left 0 top -30px; }
 
+@media screen and (max-width: 1200px) {
+  .home-container {
+    background-position: left 0 top 0; } }
+
 .home-content {
   grid-column: 2/3;
   grid-row: 1/2;
